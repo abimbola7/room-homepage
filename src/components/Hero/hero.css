@@ -1,0 +1,8 @@
+.button:hover .btnhov{
+  transform: translateX(1.5rem);
+  fill: hsl(0, 0%, 63%);
+}
+
+.button:hover{
+  color : hsl(0, 0%, 63%);
+}
