@@ -23,8 +23,9 @@ const SideBar = (props) => {
               className="flex md:hidden space-x-4 xs:space-x-8 text-black font-bold"
               >
                 {
-                  navItems.map((title)=>(
+                  navItems.map((title, index)=>(
                     <li
+                    key={index}
                     >{title}</li>
                   ))
                 }
@@ -41,7 +42,6 @@ const SideBar = (props) => {
 
 const MainHeader = () => {
   const swipe = useSwiper()
-  console.log(swipe)
   const [ navIsOpened, setNavIsOpened ] = useState(false)
   const navItems  = [ "home", "shop", "about", "contact" ];
   return (
@@ -63,8 +63,9 @@ const MainHeader = () => {
           className="hidden md:flex-row md:space-x-4 md:flex"
           >
             {
-              navItems.map((title)=>(
+              navItems.map((title, index)=>(
                 <li
+                key={index}
                 className="cursor-pointer relative after:absolute after:w-0 hover:after:w-[50%] after:h-[1px] after:bg-white after:-bottom-1 flex after:mx-auto after:left-0 after:right-0 after:transition-all after:ease-in-out after:duration-500"
                 >{title}</li>
               ))

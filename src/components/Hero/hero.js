@@ -11,8 +11,6 @@ import 'swiper/css/effect-fade'
 import { ReactComponent as Arrow } from "../../images/icon-arrow.svg"
 import SwiperNavBtn from "./swipernavbtn"
 const Hero = (props) => {
-  const swiper = useSwiper()
-  console.log(swiper)
   const heroContent = [
     {
       title : "Discover innovative ways to decorate",
@@ -51,6 +49,7 @@ const Hero = (props) => {
       {
         heroContent.map(elem=>(
           <SwiperSlide
+          key={elem.title}
           className="flex flex-row"
           >
             <div className="flex sm:flex-row flex-col h-fit sm:h-[450px]">
